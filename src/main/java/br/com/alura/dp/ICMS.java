@@ -1,4 +1,4 @@
-package br.com.alura.dp.strategy.imposto;
+package br.com.alura.dp;
 
 public class ICMS implements Imposto {
 
