@@ -11,6 +11,8 @@ public class Teste {
 		testeOrcamento();
 
 		testeInvestimento();
+		
+		testeTemplateMethod();
 	}
 
 	public static void testeOrcamento() {
@@ -29,5 +31,16 @@ public class Teste {
 
 		RealizadorDeInvestimentos realizadorDeInvestimentos = new RealizadorDeInvestimentos();
 		realizadorDeInvestimentos.realiza(conta, investimento);
+	}
+	
+	public static void testeTemplateMethod() {
+		Orcamento reforma = new Orcamento(500.0);
+
+		Imposto icpp = new ICPP();
+		System.out.println(icpp.calcula(reforma));
+		
+		Imposto ikcv = new IKCV();
+		System.out.println(ikcv.calcula(reforma));
+
 	}
 }
