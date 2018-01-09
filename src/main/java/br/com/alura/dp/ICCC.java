@@ -1,7 +1,14 @@
 package br.com.alura.dp;
 
-public class ICCC implements Imposto {
+public class ICCC extends Imposto {
+	
+	public ICCC(Imposto outroImposto) {
+		super(outroImposto);
+	}
+	
+	public ICCC() {}
 
+	@Override
 	public double calcula(Orcamento orcamento) {
 		if (orcamento.getValor() < 1000) {
 			return orcamento.getValor() * 0.05;

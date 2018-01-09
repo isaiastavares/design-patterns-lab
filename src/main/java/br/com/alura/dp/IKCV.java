@@ -1,6 +1,12 @@
 package br.com.alura.dp;
 
 public class IKCV extends TemplateDeImpostoCondicional {
+	
+	public IKCV() {}
+
+    public IKCV(Imposto outroImposto) {
+        super(outroImposto);
+    }
 
 	@Override
 	public double minimaTaxacao(Orcamento orcamento) {

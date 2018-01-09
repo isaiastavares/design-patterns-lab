@@ -2,6 +2,13 @@ package br.com.alura.dp;
 
 public class ICPP extends TemplateDeImpostoCondicional {
 
+	public ICPP() {
+	}
+
+	public ICPP(Imposto outroImposto) {
+		super(outroImposto);
+	}
+
 	@Override
 	public double minimaTaxacao(Orcamento orcamento) {
 		return orcamento.getValor() * 0.05;
@@ -16,6 +23,5 @@ public class ICPP extends TemplateDeImpostoCondicional {
 	public boolean deveUsarMaximaTaxacao(Orcamento orcamento) {
 		return orcamento.getValor() > 500;
 	}
-	
 
 }
