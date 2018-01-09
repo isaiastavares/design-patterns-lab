@@ -1,4 +1,4 @@
-package br.com.alura.dp.strategy.banco;
+package br.com.alura.dp.strategy;
 
 public class Conservador implements Investimento {
 	

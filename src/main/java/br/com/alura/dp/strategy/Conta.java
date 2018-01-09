@@ -1,7 +1,8 @@
-package br.com.alura.dp.strategy.banco;
+package br.com.alura.dp.strategy;
 
 public class Conta {
-
+	
+	private String titular;
 	private double saldo;
 
 	public void deposita(double valor) {
@@ -12,4 +13,7 @@ public class Conta {
 		return this.saldo;
 	}
 
+	public String getTitular() {
+		return titular;
+	}
 }

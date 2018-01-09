@@ -1,9 +1,9 @@
-package br.com.alura.dp.strategy.banco;
+package br.com.alura.dp.strategy;
 
 import java.util.Random;
 
 public class Moderado implements Investimento {
-
+	
 	private Random random;
 
 	public Moderado() {
@@ -11,11 +11,9 @@ public class Moderado implements Investimento {
 	}
 
 	public double calcula(Conta conta) {
-		if (random.nextInt(2) == 0) {
+		if (random.nextInt(2) == 0)
 			return conta.getSaldo() * 0.025;
-		} else {
+		else
 			return conta.getSaldo() * 0.007;
-		}
 	}
-
 }
