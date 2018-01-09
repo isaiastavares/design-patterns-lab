@@ -1,5 +1,7 @@
 package br.com.alura.dp.interpreter;
 
+import br.com.alura.dp.visitor.Visitor;
+
 public class Soma implements Expressao {
 	
 	private Expressao esquerda;
@@ -15,6 +17,18 @@ public class Soma implements Expressao {
 		int valorDaDireita = direita.avalia();
 		
 		return valorDaEsquerda + valorDaDireita;
+	}
+	
+	public Expressao getEsquerda() {
+		return esquerda;
+	}
+	
+	public Expressao getDireita() {
+		return direita;
+	}
+
+	public void aceita(Visitor impressora) {
+		impressora.visitaSoma(this);
 	}
 
 }

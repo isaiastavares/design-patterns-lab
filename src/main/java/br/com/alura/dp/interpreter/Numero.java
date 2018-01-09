@@ -1,5 +1,7 @@
 package br.com.alura.dp.interpreter;
 
+import br.com.alura.dp.visitor.Visitor;
+
 public class Numero implements Expressao {
 	
 	private int numero;
@@ -10,6 +12,14 @@ public class Numero implements Expressao {
 
 	public int avalia() {
 		return numero;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void aceita(Visitor impressora) {
+		impressora.visitaNumero(this);
 	}
 
 }
