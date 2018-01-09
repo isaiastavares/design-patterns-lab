@@ -1,0 +1,16 @@
+package br.com.alura.dp.command;
+
+public class PagaPedido implements Comando {
+	
+	private Pedido pedido;
+
+	public PagaPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
+
+	public void executa() {
+		System.out.println("Pagando pedido do " + pedido.getCliente());
+		this.pedido.paga();
+	}
+
+}
